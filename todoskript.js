@@ -3,11 +3,11 @@ const todoButton = document.querySelector(".todo-button");
 const todoList = document.querySelector(".todo-list");
 
 
-//Event Listeners
+
 todoButton.addEventListener("click", addTodo);
 todoList.addEventListener("click", deleteCheck);
 
-//Functions
+
 
 function addTodo(event) {
  
@@ -25,12 +25,12 @@ function addTodo(event) {
   completedButton.innerHTML = `<i class="fas fa-check"></i>`;
   completedButton.classList.add("complete-btn");
   todoDiv.appendChild(completedButton);
-  //Create trash button
+
   const trashButton = document.createElement("button");
   trashButton.innerHTML = `<i class="fas fa-trash"></i>`;
   trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
-  //attach final Todo
+ 
   todoList.appendChild(todoDiv);
   todoInput.value=""
 }
